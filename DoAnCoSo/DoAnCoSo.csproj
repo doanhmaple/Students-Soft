@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D1239BD-8487-4F10-B457-52A50882BD05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoAnCoSo</RootNamespace>
+    <AssemblyName>DoAnCoSo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\frmFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmFunction.Designer.cs">
+      <DependentUpon>frmFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmRole.Designer.cs">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Main1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Main1.Designer.cs">
+      <DependentUpon>Main1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030820460_dacs.cs" />
+    <Compile Include="Migrations\202006030820460_dacs.designer.cs">
+      <DependentUpon>202006030820460_dacs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modules\Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Function.Designer.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mdlFunctionRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlFunctionRole.Designer.cs">
+      <DependentUpon>mdlFunctionRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mdlRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlRole.Designer.cs">
+      <DependentUpon>mdlRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmDanhMuc.Designer.cs">
+      <DependentUpon>frmDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmDonVi.Designer.cs">
+      <DependentUpon>frmDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmHocVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmHocVu.Designer.cs">
+      <DependentUpon>frmHocVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="database.cs" />
+    <Compile Include="Modules\mdlDanhmuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlDanhmuc.Designer.cs">
+      <DependentUpon>mdlDanhmuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mdlDonvi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlDonvi.Designer.cs">
+      <DependentUpon>mdlDonvi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mdlHocvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlHocvu.Designer.cs">
+      <DependentUpon>mdlHocvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mdlLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlLop.Designer.cs">
+      <DependentUpon>mdlLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mdlUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mdlUser.Designer.cs">
+      <DependentUpon>mdlUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\DanhMuc.cs" />
+    <Compile Include="Table\DonVi.cs" />
+    <Compile Include="Table\FunctionRole.cs" />
+    <Compile Include="Table\Function.cs" />
+    <Compile Include="Table\HocVu.cs" />
+    <Compile Include="Table\Lop.cs" />
+    <Compile Include="Table\Role.cs" />
+    <Compile Include="Table\User.cs" />
+    <Compile Include="Main\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTable\danhmucview.cs" />
+    <Compile Include="ViewTable\donviView.cs" />
+    <Compile Include="ViewTable\functionview.cs" />
+    <Compile Include="ViewTable\HocVuview.cs" />
+    <Compile Include="ViewTable\lopview.cs" />
+    <Compile Include="ViewTable\Userview.cs" />
+    <EmbeddedResource Include="Controls\frmFunction.resx">
+      <DependentUpon>frmFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmRole.resx">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Main1.resx">
+      <DependentUpon>Main1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030820460_dacs.resx">
+      <DependentUpon>202006030820460_dacs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Function.resx">
+      <DependentUpon>Function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlFunctionRole.resx">
+      <DependentUpon>mdlFunctionRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlRole.resx">
+      <DependentUpon>mdlRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmDanhMuc.resx">
+      <DependentUpon>frmDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmDonVi.resx">
+      <DependentUpon>frmDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmHocVu.resx">
+      <DependentUpon>frmHocVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlDanhmuc.resx">
+      <DependentUpon>mdlDanhmuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlDonvi.resx">
+      <DependentUpon>mdlDonvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlHocvu.resx">
+      <DependentUpon>mdlHocvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlLop.resx">
+      <DependentUpon>mdlLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mdlUser.resx">
+      <DependentUpon>mdlUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Main\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DoAnCoSo.Table.Function.datasource" />
+    <None Include="Properties\DataSources\DoAnCoSo.Table.FunctionRole.datasource" />
+    <None Include="Properties\DataSources\DoAnCoSo.Table.Role.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\user.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
