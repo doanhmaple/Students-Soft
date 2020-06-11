@@ -1,4 +1,4 @@
-<img src="https://github.com/doanhmaple/StudentSoft/raw/master/DoAnCoSo/icon/Devexpress.png" width="322" height="170"/>
+<img src="https://github.com/doanhmaple/Student-Soft/raw/master/DoAnCoSo/icon/Devexpress.png" width="322" height="170"/>
 
 ## Đồ án cơ sở - Windows Forms App
 ## Ứng dụng quản lý giải quyết học vụ sinh viên
