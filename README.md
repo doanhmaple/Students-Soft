@@ -15,7 +15,6 @@
 
 - Bạn trỏ đến `Tools -> NuGet Package Manager -> Package Manager Console`
 
-![Preview](DoAnCoSo/icon/st2.png)
 - Sau đó trỏ xuống:
 
 ![Preview](DoAnCoSo/icon/st3.png)
